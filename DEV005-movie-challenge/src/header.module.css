@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    background-color: black;
+    height: 90px;
+}
+.logo{
+    margin-left: 20px;
+    width: 150px ;
+    align-self:flex-start;
+    justify-self:flex-start;
+}
+.logoimg{
+    width:  100px;
+    height: 90px;
+}
+
+.section-button {
+    display: inline-block;
+    align-self: flex-end;
+    justify-self: end;
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+/*TODO: Crear hover para los botones*/
+
+.btn{
+    background-color: black;
+    color: white;
+    border: 0;
+    font-size:x-large;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+.iconButton{
+    width:  40px;
+    height: 40px;
+    margin: 0;
+    
+}
