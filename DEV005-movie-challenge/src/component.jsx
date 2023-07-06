@@ -4,7 +4,7 @@ import Styles from './header.module.css';
 
 //TODO: Definir logo y nombre de la pagina
 //TODO: Crear un nuevo archivo donde se renderice la vista 1 
-//TODO: Crear footer 
+
 
 export const Header= () =>{
     return(
@@ -27,3 +27,6 @@ export const Footer = ()=>{
         </footer>
     )
 }
+
+
+

@@ -1,0 +1,50 @@
+.sectionRecommendations{
+    background-color: black;
+    width: 90%;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 250px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.titleRecommendations{
+    display: flex;
+    width: 200px;
+    height: 30px;
+    background-color: #5C0202;
+    color: white;
+    border-radius: 1px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.containerRecommendations{
+    width: 95%;
+    height: 70%;
+    margin-right: 50px;
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: aqua;
+    border-radius: 4px;
+}
+.containerSearch{
+    background-color: black;
+    width: 90%;
+    height: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+.iconBtnSearch{
+    width: 15px;
+    height: 15px;
+    background-color: black;
+}
+.inputSearch{
+    background-color:  #181515;
+    border: 0;
+    width: 80%;
+    height: 50%;
+    margin: auto;
+}
