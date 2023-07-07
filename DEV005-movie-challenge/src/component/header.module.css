@@ -15,8 +15,9 @@
 }
 
 .sectionButton {
-    display: inline-block;
+    display: flex;
     align-self: flex-end;
+    align-items: center;
     justify-self: end;
     margin-left: auto;
     margin-right: 200px;
@@ -25,21 +26,30 @@
 /*TODO: Crear hover para los botones*/
 
 .btn{
+    width: 150px;
+    margin-right: 20px;
     background-color: black;
     color: white;
     border: 0;
-    font-size:x-large;
-    margin-right: 40px;
+    font-size: x-large;
     margin-bottom: 20px;
     vertical-align: middle;
-}
-.iconButton{
-    width:  40px;
-    height: 40px;
-    margin: 0;
-    
+    list-style: none; 
+    text-decoration: none;
 }
 
+
+.btn:active,
+.btn:focus,
+.btn:hover {
+  color: #5C0202; 
+}
+.iconButton{
+    margin-top: 100px;
+    width:  25px;
+    height: 25px;
+    margin: 0;
+}
 .footer{
     color: white;
     background-color: black;

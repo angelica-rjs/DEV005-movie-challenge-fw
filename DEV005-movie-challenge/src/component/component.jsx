@@ -20,6 +20,8 @@ export const Header= () =>{
     )
 }
 
+
+
 export const Footer = ()=>{
     return(
         <footer className={Styles.footer}>

@@ -35,11 +35,9 @@
     margin-left: 50px;
     margin-top: 15px;
     border-radius: 6px;
-}
-.iconBtnSearch{
-    width: 15px;
-    height: 15px;
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .inputSearch{
     background-color:  #181515;
@@ -47,4 +45,18 @@
     width: 80%;
     height: 50%;
     margin: auto;
+}
+.btnSearch{
+    background-color: black;
+    color: white;
+    border: 0;
+    font-size: larger;
+    margin-right: 40px;
+}
+.iconBtnSearch{
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    margin-inline: 5px;
+    
 }

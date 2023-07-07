@@ -1,5 +1,14 @@
 import  React , {useState, useEffect} from  "react" ;
 
-const api = 'http://www.omdbapi.com/?i=tt3896198&apikey=363af7f9'
-// clave api 
-const apiKey =  'http://www.omdbapi.com/apikey.aspx?VERIFYKEY=ee7656a7-b0b3-4684-a6e9-d89bb9f7418e'
+const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODNmY2UwZWEyZjYwYzRjN2IzZmRjOWI5YWJlNGVkMyIsInN1YiI6IjY0YTVhN2E3OGM0NGI5MDEwYzlkMmQ0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mSUspfJvX2fKXK_J8PRtLEsrm-dmaiOJaq2czy3WDxc'
+    }
+  };
+  
+  fetch('https://api.themoviedb.org/3/configuration', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
