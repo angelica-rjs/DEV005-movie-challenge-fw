@@ -26,3 +26,8 @@ export const GetData = () => {
   }, [searchKey]);
 };
 
+export function Search(e){
+  e.preventDefaul();
+  GetData(searchKey)
+}
+

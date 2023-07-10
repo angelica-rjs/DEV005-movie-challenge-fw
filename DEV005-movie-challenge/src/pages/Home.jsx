@@ -1,30 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import { Footer} from '../component/Footer'
-import Styles from '../home.module.css';
 import { Navbar } from '../component/Navbar';
-
-const Recommendations = ({ title })=>{
-    return(
-    <section className={Styles.sectionRecommendations}>
-        <div className={Styles.titleRecommendations}>
-            <h4>{title}</h4>
-        </div>
-        <div className={Styles.containerRecommendations}>
-
-        </div>
-    </section>
-    )
-}
-
-const Search = ()=>{
-    return(
-        <div className={Styles.containerSearch}>
-            <input placeholder='Busca peliculas o series' className={Styles.inputSearch}/>
-            <button className={Styles.btnSearch}>Buscar<img src="./src/imagenes/lupa.png" alt="Icon search" className={Styles.iconBtnSearch}/></button>
-        </div>
-    )
-}
+import { Search } from '../component/Search';
+import { Recommendations } from '../component/Recommendations';
+import { GetData } from '../api';
 
 export const Home = ()=>{
     return(
