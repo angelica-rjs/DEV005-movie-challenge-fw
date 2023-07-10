@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {Header, Footer} from '../component/component'
+import { Footer} from '../component/Footer'
 import Styles from '../home.module.css';
 import { Navbar } from '../component/Navbar';
 
