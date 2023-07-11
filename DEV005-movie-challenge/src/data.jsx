@@ -1,33 +1,11 @@
-import React, { useState, useEffect } from 'react';
 
-const ApiUrl = 'https://www.themoviedb.org/3';
-const ApiKey = '083fce0ea2f60c4c7b3fdc9b9abe4ed3';
-const ApiImage = 'https://image.tmdb.org/t/p/original';
-
-export const GetData = () => {
-  const [movies, setMovies] = useState([]);
-  const [searchKey, setSearchKey] = useState([]);
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      const type = searchKey ? 'search' : 'discover';
-      const url = `${ApiUrl}/${type}/movie?api_key=${ApiKey}&query=${searchKey}`;
-
-      try {
-        const response = await fetch(url);
-        const { results } = await response.json();
-        setMovies(results);
-      } catch (error) {
-        console.error('Error fetching data:', error);
+export function GetData (busqueda){
+  const url = `https://api.themoviedb.org/3/${busqueda}language=en`
+  fetch(url,{
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODNmY2UwZWEyZjYwYzRjN2IzZmRjOWI5YWJlNGVkMyIsInN1YiI6IjY0YTVhN2E3OGM0NGI5MDEwYzlkMmQ0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mSUspfJvX2fKXK_J8PRtLEsrm-dmaiOJaq2czy3WDxc'
       }
-    };
-
-    fetchMovies();
-  }, [searchKey]);
-};
-
-export function Search(e){
-  e.preventDefaul();
-  GetData(searchKey)
+    }).then((response)=> response.json())
 }
-

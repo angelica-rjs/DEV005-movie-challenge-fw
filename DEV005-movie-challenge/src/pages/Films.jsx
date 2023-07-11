@@ -1,8 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { Footer} from '../component/Footer'
+import { Navbar } from '../component/Navbar';
+import { Film } from '../component/Caratulas';
 
 export const Films= ()=>{
     return(
-   <h1>soy films</h1>
-    )
+        <React.Fragment>
+              <Navbar />
+              <Film />
+              <Footer />
+            </React.Fragment>
+          );
 }

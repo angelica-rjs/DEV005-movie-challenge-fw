@@ -3,16 +3,16 @@ import { Footer} from '../component/Footer'
 import { Navbar } from '../component/Navbar';
 import { Search } from '../component/Search';
 import { Recommendations } from '../component/Recommendations';
-import { GetData } from '../api';
 
-export const Home = ()=>{
-    return(
-        <React.Fragment>
-            <Navbar/>
-            <Search/>
-            <Recommendations title="Películas que puedes ver hoy"/>
-            <Recommendations title="Series que puedes ver hoy"/>
-            <Footer/>
-        </React.Fragment>
-    )
-}
+export const Home = () => {
+    
+    return (
+      <React.Fragment>
+        <Navbar />
+        <Search />
+        <Recommendations title="Películas que puedes ver hoy" />
+        <Recommendations title="Series que puedes ver hoy"/>
+        <Footer />
+      </React.Fragment>
+    );
+  };
