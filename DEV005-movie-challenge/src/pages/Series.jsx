@@ -1,8 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { Footer} from '../component/Footer'
+import { Navbar } from '../component/Navbar';
+import { Search } from '../component/Search';
+import { Seriess } from '../component/Seriess';
+
 
 export const Series= ()=>{
     return(
-   <h1>soy series</h1>
+        <React.Fragment>
+              <Navbar />
+              <Search/>
+              <Seriess />
+              <Footer />
+            </React.Fragment>
     )
 }
