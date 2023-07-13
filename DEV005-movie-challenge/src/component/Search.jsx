@@ -10,14 +10,15 @@ export const Search = ({ setSearchKey }) => {
   };
 
   return (
-    <form className={Styles.containerSearch}>
+    <form className={Styles.containerSearch} onSubmit={handleSearch}>
       <input
         placeholder="Busca películas o series"
-        onChange={(e) => setSearchTerm(e.target.value)}
         type="text"
         className={Styles.inputSearch}
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button className={Styles.btnSearch} onClick={handleSearch}>
+      <button className={Styles.btnSearch} type="submit">
         Buscar
         <img src="./src/imagenes/lupa.png" alt="Icono de búsqueda" className={Styles.iconBtnSearch} />
       </button>

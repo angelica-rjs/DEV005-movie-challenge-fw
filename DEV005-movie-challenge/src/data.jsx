@@ -1,7 +1,6 @@
-
-export async function GetData(busqueda) {
-  const url = `https://api.themoviedb.org/3/${busqueda}language=en`;
-  const response = await fetch(url, {
+export async function GetData(url) {
+  const apiUrl = `https://api.themoviedb.org/3/${url}`;
+  const response = await fetch(apiUrl, {
     method: 'GET',
     headers: {
       accept: 'application/json',
@@ -10,3 +9,4 @@ export async function GetData(busqueda) {
   });
   return await response.json();
 }
+

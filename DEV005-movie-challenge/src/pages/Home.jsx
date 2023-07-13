@@ -2,7 +2,7 @@ import React from 'react'
 import { Footer} from '../component/Footer'
 import { Navbar } from '../component/Navbar';
 import { Search } from '../component/Search';
-import { Recommendations } from '../component/Recommendations';
+import { RecommendationsMovie } from '../component/Recommendations';
 
 export const Home = () => {
     
@@ -10,8 +10,8 @@ export const Home = () => {
       <React.Fragment>
         <Navbar />
         <Search />
-        <Recommendations title="Películas que puedes ver hoy" />
-        <Recommendations title="Series que puedes ver hoy"/>
+        <RecommendationsMovie title="Películas que puedes ver hoy" />
+        <RecommendationsMovie title="Series que puedes ver hoy"/>
         <Footer />
       </React.Fragment>
     );

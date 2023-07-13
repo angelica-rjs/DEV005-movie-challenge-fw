@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { GetData } from '../data';
 import Styles from './caratulas.module.css';
 
-export const Film = () => {
+export const Film = ({contentType}) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await GetData('movie/popular?');
+      const data = await GetData(contentType);
       console.log(data.results);
       setMovies(data.results);
     };

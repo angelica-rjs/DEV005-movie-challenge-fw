@@ -1,7 +1,7 @@
 import {NavLink} from 'react-router-dom';
 
 import Styles from './header.module.css';
-export const Navbar = () => {
+export const Navbar = ({estado}) => {
     return (
       <div className={Styles.header}>
         <div className={Styles.logo}>
@@ -10,15 +10,27 @@ export const Navbar = () => {
         <ul className={Styles.sectionButton}>
           <li className={Styles.btn}>
             <NavLink to="/" className={Styles.btn}>Home</NavLink>
+          {estado ? (
             <img className={Styles.iconButton} src="./src/imagenes/hogar.png" alt="logo" />
+            ) : (
+            <img className={Styles.iconButton} src="./src/imagenes/hogar1.png" alt="logo" />
+            )}
           </li>
           <li className={Styles.btn}>
             <NavLink to="/Films" className={Styles.btn}>Films</NavLink>
-            <img className={Styles.iconButton} src="./src/imagenes/serie.png" alt="logo" />
+            {estado ? (
+            <img className={Styles.iconButton} src="./src/imagenes/pelicula.png" alt="logo" />
+            ) : (
+            <img className={Styles.iconButton} src="./src/imagenes/pelicula1.png" alt="logo" />
+            )}
           </li>
           <li className={Styles.btn}>
             <NavLink to="/Series" className={Styles.btn}>Series</NavLink>
-            <img className={Styles.iconButton} src="./src/imagenes/pelicula.png" alt="logo"></img>
+            {estado ? (
+            <img className={Styles.iconButton} src="./src/imagenes/serie.png" alt="logo" />
+            ) : (
+            <img className={Styles.iconButton} src="./src/imagenes/serie1.png" alt="logo" />
+            )}
           </li>
         </ul>
       </div>
