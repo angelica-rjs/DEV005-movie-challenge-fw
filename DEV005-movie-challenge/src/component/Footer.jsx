@@ -1,6 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Styles from './header.module.css';
+import Styles from './Header_Footer.module.css';
 
 //TODO: Definir logo y nombre de la pagina
 
