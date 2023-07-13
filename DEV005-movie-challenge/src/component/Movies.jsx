@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { GetData } from '../data';
-import Styles from './caratulas.module.css';
+import { Caratulas } from './Caratulas';
 
 export const Film = ({contentType}) => {
   const [movies, setMovies] = useState([]);
@@ -19,15 +19,11 @@ export const Film = ({contentType}) => {
     <div>
       {movies.map((film) => {
         const imgUrl = `https://image.tmdb.org/t/p/original/${film.poster_path}`;
+        const title = film.title || film.name
 
         return (
-            <section className={Styles.section} key={film.id}>
-            <div className={Styles.containerimg}>
-              <img className={Styles.img} src={imgUrl} alt={film.title} />
-            </div>
-            <h5>{film.title}</h5>
-          </section>
-        );
+          <Caratulas key={film.id} imgUrl={imgUrl} title={title}/>
+        )
       })}
     </div>
   );
