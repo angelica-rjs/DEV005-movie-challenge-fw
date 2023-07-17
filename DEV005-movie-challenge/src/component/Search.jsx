@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
 import Styles from '../home.module.css';
-import { Film } from './Movies';
 
-export const Search = () => {
-  const [searchValue, setsearchValue] = useState('');
-console.log(searchValue, "fuera del input ")
+export const Search = ({ avisarAlPadre }) => {
+  const [searchValue, setSearchValue] = useState('');
 
-const handleSearch = (e) => {
-  e.preventDefault();
-  console.log(searchValue);
-  Film(searchValue)
+  const handleSearch = (e) => {
+    setSearchValue(e.target.value);
+  };
 
-};
+  const handleClick = (e) => {
+    e.preventDefault();
+    avisarAlPadre(searchValue);
+  };
+
   return (
-    <form className={Styles.containerSearch} >
+    <form className={Styles.containerSearch}>
       <input
         placeholder="Busca películas o series"
         type="text"
         className={Styles.inputSearch}
-       value={searchValue}
-        onChange={(e) =>{
-           console.log(e.target.value)
-           setsearchValue(e.target.value)
-           
-        }
-          }
+        value={searchValue}
+        onChange={handleSearch}
       />
-      <button className={Styles.btnSearch} type="submit" 
-        onClick={handleSearch}>
+      <button className={Styles.btnSearch} type="submit" onClick={handleClick}>
         Buscar
-        <img src="./src/imagenes/lupa.png" alt="Icono de búsqueda" className={Styles.iconBtnSearch} />
+        <img
+          src="./src/imagenes/lupa.png"
+          alt="Icono de búsqueda"
+          className={Styles.iconBtnSearch}
+        />
       </button>
     </form>
   );
 };
+
