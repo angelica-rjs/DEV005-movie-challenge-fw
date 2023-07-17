@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { GetData } from '../data';
+import { GetData, GetDataSearch } from '../API/data';
 import { Caratulas } from './Caratulas';
 
 export const Film = ({contentType}) => {
   const [movies, setMovies] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,6 +15,16 @@ export const Film = ({contentType}) => {
 
     fetchData();
   }, []);
+
+  useEffect(
+    ()=>{
+      const fetchData = async ()=>{
+        const data = await GetDataSearch(contentType);
+        console.log(data.results, "desde search")
+        setMovies(data.results)
+      };
+      fetchData();
+    }, [movies]);
 
   return (
     <div>
@@ -28,3 +39,9 @@ export const Film = ({contentType}) => {
     </div>
   );
 };
+
+
+
+
+
+      

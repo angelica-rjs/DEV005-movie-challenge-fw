@@ -1,64 +1,65 @@
-.header{
+.header {
     display: flex;
     background-color: black;
     height: 90px;
-}
-.logo{
+  }
+  
+  .logo {
     margin-left: 20px;
-    width: 150px ;
-    align-self:flex-start;
-    justify-self:flex-start;
-}
-.logoimg{
-    width:  100px;
+    width: 150px;
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+  
+  .logoimg {
+    width: 100px;
     height: 90px;
-}
-
-.sectionButton {
+  }
+  
+  .sectionButton {
     display: flex;
     align-self: flex-end;
     align-items: center;
     justify-self: end;
     margin-left: auto;
     margin-right: 200px;
-}
-
-/*TODO: Crear hover para los botones*/
-
-.btn{
-    width: 150px;
+  }
+  
+  .btn {
     margin-right: 20px;
     background-color: black;
-    color: white;
     border: 0;
-    font-size: x-large;
     margin-bottom: 20px;
     vertical-align: middle;
-    list-style: none; 
+    list-style: none;
     text-decoration: none;
-}
-
-
-.btn:active,
-.btn:focus,
-.btn:hover {
-  color: #5C0202; 
-}
-.iconButton{
-    margin-top: 100px;
-    width:  25px;
-    height: 25px;
-    margin: 0;
-}
-.footer{
-    color: white;
-    background-color: black;
+  }
+  
+  .link {
     display: flex;
-    position:static;
-    margin-bottom: 0;
-    bottom: 0;
-    width: 100%;
-    height: 45px;
-    justify-content: center;
-
-}
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .text {
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 25px; /* Tamaño de fuente personalizado */
+  }
+  
+  .icon {
+    color: white;
+    font-size: 25px; /* Tamaño de fuente personalizado */
+    margin-right: 5px; /* Espacio personalizado entre el icono y el texto */
+  }
+  
+  .active .text {
+    color: #5c0202;
+  }
+  
+  .active .icon {
+    color: #5c0202;
+  }
+  

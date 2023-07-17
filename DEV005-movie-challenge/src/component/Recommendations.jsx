@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Styles from '../home.module.css';
 
 import Styles2 from './caratulas.module.css';
-import { GetData } from '../data';
+import { GetData } from '../API/data';
 
 export const RecommendationsMovie = () => {
   const [movies, setMovies] = useState([]);
