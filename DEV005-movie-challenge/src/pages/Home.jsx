@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Footer } from '../component/Footer';
 import { Navbar } from '../component/Navbar';
 import { Search } from '../component/Search';
-import { Film } from '../component/Movies';
+import { RecommendationsMovie } from '../component/Recommendations';
 import { GetData, GetDataSearchTv } from '../API/data';
 
 export const Home = () => {
@@ -35,8 +35,8 @@ export const Home = () => {
     <React.Fragment>
       <Navbar />
       <Search avisarAlPadre={handleSearchKey} />
-      <Film movies={recommendations.movies} />
-      <Film movies={recommendations.series} />
+      <RecommendationsMovie movies={recommendations.movies} title="Peliculas que puedes ver"  />
+      <RecommendationsMovie movies={recommendations.series} title="Series que puedes ver" />
       <Footer />
     </React.Fragment>
   );

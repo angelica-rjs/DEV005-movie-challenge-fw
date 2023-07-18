@@ -17,7 +17,6 @@ export const Films = () => {
       if (showSearchResults) {
         const data = await GetDataSearchMovie(contentType);
         setMovies(data.results);
-        console.log(data.results, "de la ale")
       } else {
         const data = await GetData(contentType);
         setMovies(data.results);
