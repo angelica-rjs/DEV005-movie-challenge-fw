@@ -1,3 +1,0 @@
-//TODO: Probar funcion get data en busqueda 
-//TODO: Probar funcion get datqa en peliclas
-//TODO: Probar funcion get data en series  

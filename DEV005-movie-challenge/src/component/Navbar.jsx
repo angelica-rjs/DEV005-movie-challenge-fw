@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom';
 import { BiSolidCameraMovie, BiHomeAlt2 } from 'react-icons/bi';
 import { RiMovieLine } from 'react-icons/ri';
 import Styles from './Header_Footer.module.css';
+import { useLocation } from 'react-router-dom';
+
 
 export const Navbar = () => {
   const currentPath = window.location.pathname;

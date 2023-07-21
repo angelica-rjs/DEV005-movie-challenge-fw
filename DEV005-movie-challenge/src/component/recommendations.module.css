@@ -1,44 +1,39 @@
-.recommendations-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    margin: 0px;
-  }
-  
-  .absolute-overlay {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 350px;
-    background: black;
-  }
-  
-  .title-container {
+.sectionRecommendations {
     position: relative;
-    margin: 20px 0;
+    width: 80%;
+    height: 320px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .containerLitle {
+    background-color: brown;
+    width: 370px;
+    
+  }
+  
+  .container {
+    margin-left: 20px;
   }
   
   .title {
-    z-index: 1;
+    color: white;
+    margin-top: 20px;
   }
   
-  .movies-container {
+  .movies {
     display: flex;
-    justify-content: center; /* Agregado para centrar los elementos horizontalmente */
-    align-items: center; /* Agregado para centrar los elementos verticalmente */
-    z-index: 1;
+    margin-top: 10px;
   }
   
-  .movie {
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
+  .caratulas {
+    margin-right: 10px;
   }
+  
   
   

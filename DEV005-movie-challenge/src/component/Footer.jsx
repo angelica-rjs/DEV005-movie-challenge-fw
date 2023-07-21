@@ -5,8 +5,8 @@ import Styles from './Header_Footer.module.css';
 
 export const Footer = ()=>{
     return(
-        <footer className={Styles.footer}>
-            <p>Derechos reservados</p>
+        <footer  role={"footer"} className={Styles.footer}>
+            <p className={Styles.pFooter}>Derechos reservados</p>
         </footer>
     )
 }

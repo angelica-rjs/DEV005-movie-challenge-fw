@@ -35,8 +35,8 @@ export const Home = () => {
     <React.Fragment>
       <Navbar />
       <Search avisarAlPadre={handleSearchKey} />
-      <RecommendationsMovie movies={recommendations.movies} title="Peliculas que puedes ver"  />
-      <RecommendationsMovie movies={recommendations.series} title="Series que puedes ver" />
+      <RecommendationsMovie movies={recommendations.movies} title="Peliculas que puedes ver hoy"  />
+      <RecommendationsMovie movies={recommendations.series} title="Series que puedes ver hoy" />
       <Footer />
     </React.Fragment>
   );

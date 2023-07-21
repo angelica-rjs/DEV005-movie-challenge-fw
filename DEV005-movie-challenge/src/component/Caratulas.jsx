@@ -6,7 +6,7 @@ export const Caratulas = ({ imgUrl, title }) => {
   return (
     <section className={Styles.section}>
       <div className={Styles.containerimg}>
-        <img className={Styles.img} src={imgUrl} alt={title} />
+        <img role={"img"} className={Styles.img} src={imgUrl} alt={title} />
       </div>
     </section>
   )
