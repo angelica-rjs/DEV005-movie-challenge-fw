@@ -1,15 +1,14 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BiSolidCameraMovie, BiHomeAlt2 } from 'react-icons/bi';
 import { RiMovieLine } from 'react-icons/ri';
 import Styles from './Header_Footer.module.css';
-import { useLocation } from 'react-router-dom';
-
 
 export const Navbar = () => {
   const currentPath = window.location.pathname;
 
   return (
-    <div className={Styles.header}>
+    <nav role="navigation" className={Styles.header}>
       <div className={Styles.logo}>
         <img className={Styles.logoimg} src="./src/imagenes/thor.png" alt="logo" />
       </div>
@@ -33,6 +32,7 @@ export const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
+

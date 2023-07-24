@@ -3,7 +3,7 @@ import { Footer } from '../component/Footer';
 import { Navbar } from '../component/Navbar';
 import { Film } from '../component/Movies';
 import { Search } from '../component/Search';
-import { GetDataSearchTv, GetData } from '../API/data';
+import { GetData } from '../API/data';
 
 export const Series = () => {
     const [searchKey, setSearchKey] = useState('');
@@ -15,11 +15,11 @@ export const Series = () => {
         const contentType = showSearchResults ? `${searchKey}` : 'tv/popular?';
         
         if (showSearchResults) {
-          const data = await GetDataSearchTv(contentType);
+          const data = await GetData( `https://api.themoviedb.org/3/search/tv?query=${contentType}`);
           setSeries(data.results);
           console.log(data.results, "desde Series")
         } else {
-          const data = await GetData(contentType);
+          const data = await GetData(`https://api.themoviedb.org/3/${contentType}`);
           setSeries(data.results);
         }
       };

@@ -3,7 +3,7 @@ import { Footer } from '../component/Footer';
 import { Navbar } from '../component/Navbar';
 import { Search } from '../component/Search';
 import { RecommendationsMovie } from '../component/Recommendations';
-import { GetData, GetDataSearchTv } from '../API/data';
+import { GetData} from '../API/data';
 
 export const Home = () => {
   const [searchKey, setSearchKey] = useState('');
@@ -13,14 +13,14 @@ export const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (showSearchResults) {
-        const movieResults = await GetDataSearchTv(searchKey);
-        const seriesResults = await GetDataSearchTv(`search/tv?query=${searchKey}`);
+        const movieResults = await  GetData( `https://api.themoviedb.org/3/search/movie?query=${searchKey}`);
+        const seriesResults = await GetData( `https://api.themoviedb.org/3/search/tv?query=${searchKey}`);
         setRecommendations({ movies: movieResults.results.slice(0, 5), series: seriesResults.results.slice(0, 5) });
       } else {
-        const movieData = await GetData('trending/movie/day?language=en-US');
-        const seriesData = await GetData('trending/tv/day?language=en-US');
+        const movieData = await GetData('https://api.themoviedb.org/3/trending/movie/day ');
+        const seriesData = await GetData('https://api.themoviedb.org/3/trending/tv/day');
         setRecommendations({ movies: movieData.results.slice(0, 5), series: seriesData.results.slice(0, 5) });
-      }
+      }`https://api.themoviedb.org/3/trending/movie/day?language=en-U`
     };
 
     fetchData();
@@ -41,3 +41,5 @@ export const Home = () => {
     </React.Fragment>
   );
 };
+
+     

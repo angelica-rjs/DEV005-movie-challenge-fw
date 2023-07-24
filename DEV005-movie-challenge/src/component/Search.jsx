@@ -14,8 +14,9 @@ export const Search = ({ avisarAlPadre }) => {
   };
 
   return (
-    <form className={Styles.containerSearch}>
+    <form role="form" className={Styles.containerSearch}>
       <input
+        role="input"
         placeholder="Busca películas o series"
         type="text"
         className={Styles.inputSearch}

@@ -3,7 +3,7 @@ import { Footer } from '../component/Footer';
 import { Navbar } from '../component/Navbar';
 import { Film } from '../component/Movies';
 import { Search } from '../component/Search';
-import { GetData, GetDataSearchMovie } from '../API/data';
+import { GetData } from '../API/data';
 
 export const Films = () => {
   const [searchKey, setSearchKey] = useState('');
@@ -12,13 +12,13 @@ export const Films = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const contentType = showSearchResults ? `${searchKey}` : 'movie/popular';
-      
+      const contentType = showSearchResults ? encodeURIComponent(searchKey) : 'movie/popular';
+
       if (showSearchResults) {
-        const data = await GetDataSearchMovie(contentType);
+        const data = await GetData( `https://api.themoviedb.org/3/search/movie?query=${contentType}`);
         setMovies(data.results);
       } else {
-        const data = await GetData(contentType);
+        const data = await GetData(`https://api.themoviedb.org/3/${contentType}`);
         setMovies(data.results);
       }
     };
@@ -35,7 +35,9 @@ export const Films = () => {
     <React.Fragment>
       <Navbar />
       <Search avisarAlPadre={handleSearchKey} />
-      <Film movies={movies} />
+      <section role="section">
+        <Film movies={movies} />
+      </section>
       <Footer />
     </React.Fragment>
   );
