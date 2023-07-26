@@ -6,7 +6,7 @@ export const RecommendationsMovie = ({ title, movies }) => {
   return (
     <section className={Styles.sectionRecommendations}>
       <div className={Styles.container}>
-        <div className={Styles.containerLitle}>
+        <div className={Styles.containertitle}>
         <h2 className={Styles.title}>{title}</h2>
         </div>
         <div className={Styles.movies}>

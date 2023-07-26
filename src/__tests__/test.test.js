@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, screen, waitFor, fireEvent   } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom'; 
+import { render, screen, waitFor, fireEvent } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom'; // Para las aserciones con jest-dom
 import { Caratulas } from '../component/Caratulas';
-import {Footer} from '../component/Footer'
+import { Footer } from '../component/Footer'
 import { Film } from '../component/Movies';
 import { Navbar } from '../component/Navbar';
 import { RecommendationsMovie } from '../component/Recommendations';
@@ -27,8 +27,8 @@ test('renderiza correctamente la imagen y el título', () => {
 });
 
 
-test('renderiza correctamente footer y parrafo', () =>{
-  render(<Footer/>)
+test('renderiza correctamente footer y parrafo', () => {
+  render(<Footer />)
   const pElement = screen.getByText('Derechos reservados');
   expect(pElement).toBeInTheDocument();
 
@@ -38,7 +38,7 @@ test('renderiza correctamente footer y parrafo', () =>{
 })
 
 
-test('renderiza correctamente las caratulas', () =>{
+test('renderiza correctamente las caratulas', () => {
   const movies = [
     {
       id: 1,
@@ -51,7 +51,7 @@ test('renderiza correctamente las caratulas', () =>{
       poster_path: '/ruta/a/pelicula2.jpg',
     },
   ];
-  render(<Film movies={movies}/>)
+  render(<Film movies={movies} />)
   const imgElements = screen.getAllByRole('img');
   // Verifica que las imágenes de carátula tengan los atributos de src y alt adecuados
   movies.forEach((film, index) => {
@@ -64,20 +64,20 @@ test('renderiza correctamente las caratulas', () =>{
 })
 
 
-test('renderiza correctamente las opciones de navbar', ()=>{
+test('renderiza correctamente las opciones de navbar', () => {
   render(
-  <MemoryRouter>
-        <Navbar />
-      </MemoryRouter>
-      )
-  
-      const homeElement = screen.queryAllByText('Home');
-      const filmsElement = screen.queryAllByText('Films');
-      const seriesElement = screen.queryAllByText('Series');
-    
-      expect(homeElement.length).toBeGreaterThan(0);
-      expect(filmsElement.length).toBeGreaterThan(0);
-      expect(seriesElement.length).toBeGreaterThan(0);
+    <MemoryRouter>
+      <Navbar />
+    </MemoryRouter>
+  )
+
+  const homeElement = screen.queryAllByText('Home');
+  const filmsElement = screen.queryAllByText('Films');
+  const seriesElement = screen.queryAllByText('Series');
+
+  expect(homeElement.length).toBeGreaterThan(0);
+  expect(filmsElement.length).toBeGreaterThan(0);
+  expect(seriesElement.length).toBeGreaterThan(0);
 })
 
 test('renderiza correctamente la sección de recomendaciones con las películas proporcionadas', () => {
@@ -111,12 +111,12 @@ test('renderiza correctamente la sección de recomendaciones con las películas 
   });
 });
 
-test('renderiza correctamente form y boton', () =>{
-  render(<Search/>)
-  const formElement= screen.getByRole('form');
+test('renderiza correctamente form y boton', () => {
+  render(<Search />)
+  const formElement = screen.getByRole('form');
   expect(formElement).toBeInTheDocument();
 
-  
+
   const buttonElement = screen.getByRole('button');
   expect(buttonElement).toHaveClass('btnSearch');
 })
@@ -141,7 +141,7 @@ describe('Films Component', () => {
       </MemoryRouter>
     );
 
-  
+
     const navbarElement = screen.getByRole('navigation');
     expect(navbarElement).toBeInTheDocument();
 
@@ -161,9 +161,9 @@ describe('Films Component', () => {
     fireEvent.change(searchInput, { target: { value: 'acción' } });
     fireEvent.submit(searchElement);
 
-// Verifica que se haya llamado a GetData con la URL correcta al realizar la búsqueda
-await waitFor(() => {
-  expect(GetData).toHaveBeenCalledWith("https://api.themoviedb.org/3/movie/popular");
-});
+    // Verifica que se haya llamado a GetData con la URL correcta al realizar la búsqueda
+    await waitFor(() => {
+      expect(GetData).toHaveBeenCalledWith("https://api.themoviedb.org/3/movie/popular");
+    });
   });
 });

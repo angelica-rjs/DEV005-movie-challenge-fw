@@ -4,7 +4,7 @@ import Styles from './cars.module.css';
 
 export const Film = ({ movies }) => {
   return (
-    <div className={Styles.container} >
+    <div className={Styles.container}>
       {movies.map((film) => {
         const imgUrl = `https://image.tmdb.org/t/p/original/${film.poster_path}`;
         const title = film.title || film.name;
@@ -14,3 +14,6 @@ export const Film = ({ movies }) => {
     </div>
   );
 };
+
+
+

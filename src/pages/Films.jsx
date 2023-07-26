@@ -31,6 +31,7 @@ export const Films = () => {
   }, [searchKey, showSearchResults]);
 
   //cambia el estado de variables cuando se realiza una busqueda
+  //se dispara desde search
   const handleSearchKey = (key) => {
     setSearchKey(key);
     setShowSearchResults(true);

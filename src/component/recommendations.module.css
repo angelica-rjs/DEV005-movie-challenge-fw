@@ -1,39 +1,44 @@
 .sectionRecommendations {
-    position: relative;
-    width: 80%;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .containerLitle {
-    background-color: brown;
-    width: 370px;
-    
-  }
-  
-  .container {
-    margin-left: 20px;
-  }
-  
-  .title {
-    color: white;
-    margin-top: 20px;
-  }
-  
-  .movies {
-    display: flex;
-    margin-top: 10px;
-  }
-  
-  .caratulas {
-    margin-right: 10px;
-  }
-  
-  
-  
+  position: relative;
+  width: 80%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containertitle {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  background-color: brown;
+  width: 360px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+
+.title {
+  color: white;
+  margin-top: 20px;
+  margin: 0; 
+}
+
+.movies {
+  display: flex;
+  margin-top: 10px;
+}
+
+.caratulas {
+  margin-right: 10px;
+}
+.container {
+  margin-left: 20px;
+}

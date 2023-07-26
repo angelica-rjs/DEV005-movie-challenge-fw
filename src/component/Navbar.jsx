@@ -10,7 +10,7 @@ export const Navbar = () => {
   return (
     <nav role="navigation" className={Styles.header}>
       <div className={Styles.logo}>
-        <img className={Styles.logoimg} src="./src/imagenes/thor.png" alt="logo" />
+        <img className={Styles.logoimg} src="./src/imagenes/logo.png" alt="logo" />
       </div>
       <ul className={Styles.sectionButton}>
         <li className={`${Styles.btn} ${currentPath === '/' ? Styles.active : ''}`}>

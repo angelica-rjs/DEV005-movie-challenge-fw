@@ -12,7 +12,7 @@ export const Series = () => {
   
     useEffect(() => {
       const fetchData = async () => {
-        const contentType = showSearchResults ? `${searchKey}` : 'tv/popular?';
+        const contentType = showSearchResults ? encodeURIComponent(searchKey)  : 'tv/popular?';
         
         if (showSearchResults) {
           const data = await GetData( `https://api.themoviedb.org/3/search/tv?query=${contentType}`);

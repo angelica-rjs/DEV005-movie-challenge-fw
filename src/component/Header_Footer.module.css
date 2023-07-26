@@ -6,14 +6,14 @@
   
   .logo {
     margin-left: 20px;
-    width: 150px;
+    width: 200px;
     align-self: flex-start;
     justify-self: flex-start;
   }
   
   .logoimg {
-    width: 100px;
-    height: 90px;
+    width: 100%;
+    height: 90%;
   }
   
   .sectionButton {
